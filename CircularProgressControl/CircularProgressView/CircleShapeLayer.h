@@ -15,6 +15,6 @@
 @property (assign, nonatomic) double percent;
 @property (nonatomic) UIColor *progressColor;
 
-- (void)doMagic;
+- (void)trackProgress;
 
 @end

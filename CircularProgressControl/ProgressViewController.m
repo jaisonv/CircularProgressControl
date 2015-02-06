@@ -32,7 +32,7 @@
     self.circleProgressView.tintColor = tintColor;
     self.slider.tintColor = tintColor;
     
-    [self.circleProgressView doMagic];
+    [self.circleProgressView updateProgress];
 }
 
 

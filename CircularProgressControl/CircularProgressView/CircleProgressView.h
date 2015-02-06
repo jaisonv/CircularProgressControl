@@ -12,6 +12,6 @@
 
 @property (assign, nonatomic) double percent;
 
-- (void)doMagic;
+- (void)updateProgress;
 
 @end

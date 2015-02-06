@@ -65,7 +65,7 @@
                                        clockwise:YES].CGPath;
 }
 
-- (void)doMagic {
+- (void)trackProgress {
     self.progressLayer.strokeEnd = self.percent;
     
     [self startAnimation];

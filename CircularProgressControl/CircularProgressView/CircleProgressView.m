@@ -40,10 +40,10 @@
     [super updateConstraints];
 }
 
-- (void)doMagic {
+- (void)updateProgress {
     self.progressLayer.percent = _percent;
     
-    [self.progressLayer doMagic];
+    [self.progressLayer trackProgress];
 }
 
 #pragma mark - Private Methods

@@ -12,9 +12,9 @@
 
 @interface CircleShapeLayer : CAShapeLayer
 
-@property (nonatomic) NSTimeInterval elapsedTime;
-@property (nonatomic) NSTimeInterval timeLimit;
-@property (assign, nonatomic, readonly) double percent;
+@property (assign, nonatomic) double percent;
 @property (nonatomic) UIColor *progressColor;
+
+- (void)doMagic;
 
 @end

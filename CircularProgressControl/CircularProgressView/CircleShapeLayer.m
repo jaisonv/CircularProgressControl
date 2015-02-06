@@ -65,50 +65,21 @@
                                        clockwise:YES].CGPath;
 }
 
-
-- (void)setElapsedTime:(NSTimeInterval)elapsedTime {
-    _initialProgress = [self calculatePercent:_elapsedTime toTime:_timeLimit];
-    _elapsedTime = elapsedTime;
-    
+- (void)doMagic {
     self.progressLayer.strokeEnd = self.percent;
-    [self startAnimation];
-}
-
-- (double)percent {
     
-    _percent = [self calculatePercent:_elapsedTime toTime:_timeLimit];
-    return _percent;
+    [self startAnimation];
 }
 
 - (void)setProgressColor:(UIColor *)progressColor {
     self.progressLayer.strokeColor = progressColor.CGColor;
 }
 
-- (double)calculatePercent:(NSTimeInterval)fromTime toTime:(NSTimeInterval)toTime {
-    
-    if ((toTime > 0) && (fromTime > 0)) {
-        
-        CGFloat progress = 0;
-        
-        progress = fromTime / toTime;
-        
-        if ((progress * 100) > 100) {
-            progress = 1.0f;
-        }
-        
-        NSLog(@"Percent = %f", progress);
-        
-        return progress;
-    }
-    else
-        return 0.0f;
-}
-
 - (void)startAnimation {
     
     CABasicAnimation *pathAnimation = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
     pathAnimation.duration = 1.0;
-    pathAnimation.fromValue = @(self.initialProgress);
+    pathAnimation.fromValue = @(self.percent);
     pathAnimation.toValue = @(self.percent);
     pathAnimation.removedOnCompletion = YES;
     

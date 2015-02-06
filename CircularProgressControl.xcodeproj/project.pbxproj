@@ -16,7 +16,6 @@
 		873C0F6D1A20D593006BE395 /* CircleShapeLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 873C0F6C1A20D593006BE395 /* CircleShapeLayer.m */; };
 		873C0F701A20D685006BE395 /* CircleProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 873C0F6F1A20D685006BE395 /* CircleProgressView.m */; };
 		873C0F731A20DE4A006BE395 /* ProgressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 873C0F721A20DE4A006BE395 /* ProgressViewController.m */; };
-		873C0F761A2159DB006BE395 /* Session.m in Sources */ = {isa = PBXBuildFile; fileRef = 873C0F751A2159DB006BE395 /* Session.m */; };
 		873C0F7A1A216BE9006BE395 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 873C0F7C1A216BE9006BE395 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
@@ -48,8 +47,6 @@
 		873C0F6F1A20D685006BE395 /* CircleProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CircleProgressView.m; path = CircularProgressView/CircleProgressView.m; sourceTree = "<group>"; };
 		873C0F711A20DE4A006BE395 /* ProgressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressViewController.h; sourceTree = "<group>"; };
 		873C0F721A20DE4A006BE395 /* ProgressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressViewController.m; sourceTree = "<group>"; };
-		873C0F741A2159DB006BE395 /* Session.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Session.h; sourceTree = "<group>"; };
-		873C0F751A2159DB006BE395 /* Session.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Session.m; sourceTree = "<group>"; };
 		873C0F7B1A216BE9006BE395 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		873C0F7D1A2170A9006BE395 /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		873C0F7E1A2170AA006BE395 /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -94,7 +91,6 @@
 		873C0F3E1A20D35F006BE395 /* CircularProgressControl */ = {
 			isa = PBXGroup;
 			children = (
-				873C0F661A20D415006BE395 /* Model */,
 				873C0F651A20D40E006BE395 /* View */,
 				873C0F671A20D41C006BE395 /* Controller */,
 				873C0F6A1A20D4B9006BE395 /* Resources */,
@@ -138,15 +134,6 @@
 				873C0F681A20D452006BE395 /* CircularProgressView */,
 			);
 			name = View;
-			sourceTree = "<group>";
-		};
-		873C0F661A20D415006BE395 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				873C0F741A2159DB006BE395 /* Session.h */,
-				873C0F751A2159DB006BE395 /* Session.m */,
-			);
-			name = Model;
 			sourceTree = "<group>";
 		};
 		873C0F671A20D41C006BE395 /* Controller */ = {
@@ -244,10 +231,11 @@
 				TargetAttributes = {
 					873C0F3B1A20D35F006BE395 = {
 						CreatedOnToolsVersion = 6.1;
-						DevelopmentTeam = JAH63CX6ST;
+						DevelopmentTeam = 5RZ9P5X45X;
 					};
 					873C0F541A20D360006BE395 = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = 5RZ9P5X45X;
 						TestTargetID = 873C0F3B1A20D35F006BE395;
 					};
 				};
@@ -300,7 +288,6 @@
 			files = (
 				873C0F731A20DE4A006BE395 /* ProgressViewController.m in Sources */,
 				873C0F451A20D360006BE395 /* AppDelegate.m in Sources */,
-				873C0F761A2159DB006BE395 /* Session.m in Sources */,
 				873C0F701A20D685006BE395 /* CircleProgressView.m in Sources */,
 				873C0F421A20D35F006BE395 /* main.m in Sources */,
 				873C0F6D1A20D593006BE395 /* CircleShapeLayer.m in Sources */,
@@ -506,6 +493,7 @@
 				873C0F611A20D360006BE395 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		873C0F621A20D360006BE395 /* Build configuration list for PBXNativeTarget "CircularProgressControlTests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +502,7 @@
 				873C0F641A20D360006BE395 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

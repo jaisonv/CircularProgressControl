@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -18,37 +18,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sfh-rd-cVf" customClass="CircleProgressView">
-                                <rect key="frame" x="146" y="50" width="250" height="250"/>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sfh-rd-cVf" customClass="CircleProgressView">
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <variation key="widthClass=compact" ambiguous="YES">
                                     <rect key="frame" x="56" y="45" width="288" height="280"/>
                                 </variation>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jc2-0z-CRW">
-                                <rect key="frame" x="230" y="358" width="140" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Start">
-                                            <attributes>
-                                                <font key="NSFont" size="36" name="HelveticaNeue-Medium"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </state>
-                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
-                                    <rect key="frame" x="130" y="345" width="140" height="30"/>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact"/>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ogb-Al-r3G">
+                                <rect key="frame" x="149" y="507" width="303" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="299" id="i0i-C0-daG"/>
+                                </constraints>
                                 <connections>
-                                    <action selector="actionButtonClick:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="W11-EL-mhu"/>
+                                    <action selector="pickSlide:" destination="vXZ-lx-hvc" eventType="valueChanged" id="mF5-Ob-s3f"/>
                                 </connections>
-                            </button>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="jc2-0z-CRW" firstAttribute="top" secondItem="Sfh-rd-cVf" secondAttribute="bottom" constant="20" id="1tJ-wf-4hq"/>
                             <constraint firstItem="Sfh-rd-cVf" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="10" id="FTe-aI-Pl3">
                                 <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
                             </constraint>
@@ -56,10 +43,9 @@
                                 <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
                             </constraint>
                             <constraint firstAttribute="height" secondItem="Sfh-rd-cVf" secondAttribute="height" multiplier="2.2" id="HuQ-Ub-ogo"/>
+                            <constraint firstAttribute="centerX" secondItem="ogb-Al-r3G" secondAttribute="centerX" constant="-0.5" id="Itg-Ax-C3w"/>
                             <constraint firstItem="Sfh-rd-cVf" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="ZGo-O2-HoA"/>
-                            <constraint firstAttribute="centerX" secondItem="jc2-0z-CRW" secondAttribute="centerX" constant="-0.5" id="acS-DZ-YbW">
-                                <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
-                            </constraint>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="ogb-Al-r3G" secondAttribute="bottom" constant="63" id="s0J-Re-9kJ"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -67,8 +53,6 @@
                                 <exclude reference="FzU-uW-c8C"/>
                                 <exclude reference="HuQ-Ub-ogo"/>
                                 <exclude reference="ZGo-O2-HoA"/>
-                                <exclude reference="1tJ-wf-4hq"/>
-                                <exclude reference="acS-DZ-YbW"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -77,19 +61,17 @@
                                 <include reference="FzU-uW-c8C"/>
                                 <include reference="HuQ-Ub-ogo"/>
                                 <include reference="ZGo-O2-HoA"/>
-                                <include reference="1tJ-wf-4hq"/>
-                                <include reference="acS-DZ-YbW"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="actionButton" destination="jc2-0z-CRW" id="qmL-Nq-ayN"/>
                         <outlet property="circleProgressView" destination="Sfh-rd-cVf" id="vWP-pJ-I3P"/>
+                        <outlet property="slider" destination="ogb-Al-r3G" id="dax-S8-p9l"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-111" y="131.25"/>
+            <point key="canvasLocation" x="-111" y="131"/>
         </scene>
     </scenes>
 </document>

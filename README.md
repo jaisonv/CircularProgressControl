@@ -6,7 +6,7 @@ This is a simple and adaptive Circular Progress View.
 
 It basically consists of two CAShapeLayers to draw a static and a animated circle, and a progress label with two lines, the first to describe a timer and the second for a state.
 
-![Screenshot](https://cloud.githubusercontent.com/assets/1878740/5596864/2269a630-927f-11e4-8d3b-aa58ef0e3b8e.png) 
+![Screenshot](https://cloud.githubusercontent.com/assets/2567823/6074763/e5f74722-adac-11e4-839c-e4dd15655a74.png) 
 
 ## Features
 

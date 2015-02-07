@@ -14,7 +14,4 @@
 
 @property (strong, nonatomic) IBOutlet CircleProgressView *circleProgressView;
 
-@property (strong, nonatomic) IBOutlet UIButton *actionButton;
-
-
 @end

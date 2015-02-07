@@ -17,15 +17,6 @@
 
 @implementation CircleProgressView
 
-- (instancetype)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
-    if (self) {
-        [self setupViews];
-    }
-    return self;
-}
-
 - (void)awakeFromNib {
     [self setupViews];
 }

@@ -39,4 +39,4 @@ self.circleProgressView.percent = 20;
 
 ### Author
 
-Originally from ([carantes/CircularProgressControl](https://github.com/carantes/CircularProgressControl)) by Carlos Arantes ([@carantes](http://twitter.com/carantes))
+Originally from [carantes/CircularProgressControl](https://github.com/carantes/CircularProgressControl) by Carlos Arantes ([@carantes](http://twitter.com/carantes))
